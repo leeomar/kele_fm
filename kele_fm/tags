@@ -1,0 +1,121 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BOT_NAME	settings.py	/^BOT_NAME = 'kele_fm'$/;"	v
+BOT_VERSION	settings.py	/^BOT_VERSION = '1.0'$/;"	v
+BaseSpider	spiders/tmall_spider.py	/^from scrapy.spider import BaseSpider$/;"	i
+Crawler	middlewares/hostpolite.py	/^from scrapy.crawler import Crawler$/;"	i
+DEFAULT_ITEM_CLASS	settings.py	/^DEFAULT_ITEM_CLASS = 'kele_fm.items.KeleFmItem'$/;"	v
+DL	upyun-python-api/upyun.py	/^DL = '\/'$/;"	v
+DOWNLOADER_MIDDLEWARES	settings.py	/^DOWNLOADER_MIDDLEWARES = {$/;"	v
+DontCloseSpider	seedappend.py	/^from scrapy.exceptions import DontCloseSpider$/;"	i
+ExecutionEngine	middlewares/hostpolite.py	/^from scrapy.core.engine import ExecutionEngine$/;"	i
+Field	items.py	/^from scrapy.item import Item, Field$/;"	i
+FolderItem	upyun-python-api/upyun.py	/^class FolderItem(object):$/;"	c	inherits:object
+GoodsItem	items.py	/^class GoodsItem(Item):$/;"	c	inherits:Item
+GoodsItem	spiders/tmall_spider.py	/^from kele_fm.items import GoodsItem$/;"	i
+HOST_POLITENESS_DELAY	middlewares/hostpolite.py	/^    HOST_POLITENESS_DELAY = 1.0$/;"	v	class:HostPoliteCtrlMiddleware
+HostPoliteCtrlMiddleware	middlewares/hostpolite.py	/^class HostPoliteCtrlMiddleware(object):$/;"	c	inherits:object
+HtmlXPathSelector	spiders/tmall_spider.py	/^from scrapy.selector import HtmlXPathSelector$/;"	i
+IgnoreRequest	middlewares/hostpolite.py	/^from scrapy.exceptions import IgnoreRequest$/;"	i
+Item	items.py	/^from scrapy.item import Item, Field$/;"	i
+KeleFmPipeline	pipelines.py	/^class KeleFmPipeline(object):$/;"	c	inherits:object
+LOG_FILE	settings.py	/^LOG_FILE = 'tmall.log'$/;"	v
+METADATA_PREFIX	upyun-python-api/upyun.py	/^METADATA_PREFIX = 'x-upyun-meta-'$/;"	v
+NEWSPIDER_MODULE	settings.py	/^NEWSPIDER_MODULE = 'kele_fm.spiders'$/;"	v
+REQ_SCHD_KEY	middlewares/hostpolite.py	/^    REQ_SCHD_KEY = "reschd_key"$/;"	v	class:HostPoliteCtrlMiddleware
+Request	middlewares/hostpolite.py	/^from scrapy.http import Request$/;"	i
+Request	spiders/tmall_spider.py	/^from scrapy.http import Request$/;"	i
+SPIDER_MODULES	settings.py	/^SPIDER_MODULES = ['kele_fm.spiders']$/;"	v
+SeedAppend	seedappend.py	/^class SeedAppend(object):$/;"	c	inherits:object
+TmallSpider	spiders/tmall_spider.py	/^class TmallSpider(BaseSpider):$/;"	c	inherits:BaseSpider
+USER_AGENT	settings.py	/^USER_AGENT = 'Mozilla\/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident\/4.0)'$/;"	v
+UpYun	upyun-python-api/test.py	/^from upyun import UpYun,md5,md5file$/;"	i
+UpYun	upyun-python-api/upyun.py	/^class UpYun(object):$/;"	c	inherits:object
+UpYunException	upyun-python-api/upyun.py	/^class UpYunException(Exception):$/;"	c	inherits:Exception
+__init__	middlewares/hostpolite.py	/^    def __init__(self):$/;"	m	class:HostPoliteCtrlMiddleware	access:public
+__init__	seedappend.py	/^    def __init__(self):$/;"	m	class:SeedAppend	access:public
+__init__	upyun-python-api/upyun.py	/^    def __init__(self, bucket, username, password):$/;"	m	class:UpYun	access:public
+__init__	upyun-python-api/upyun.py	/^    def __init__(self, filename, filetype, size, number):$/;"	m	class:FolderItem	access:public
+_add_upyun_auth_header	upyun-python-api/upyun.py	/^    def _add_upyun_auth_header(self, headers, method, uri):$/;"	m	class:UpYun	access:public
+_basicAuth	upyun-python-api/upyun.py	/^    def _basicAuth(self,headers, username, password):$/;"	m	class:UpYun	access:public
+_net_worker	upyun-python-api/upyun.py	/^    def _net_worker(self, method, path, data='', headers={}, metadata={}):$/;"	m	class:UpYun	access:public
+_process_detailpage	spiders/tmall_spider.py	/^    def _process_detailpage(self, response):$/;"	m	class:TmallSpider	access:public
+_process_entrypage	spiders/tmall_spider.py	/^    def _process_entrypage(self, response):$/;"	m	class:TmallSpider	access:public
+_process_listpage	spiders/tmall_spider.py	/^    def _process_listpage(self, response):$/;"	m	class:TmallSpider	access:public
+a	upyun-python-api/test.py	/^    a = u.readDir('\/')$/;"	v
+a	upyun-python-api/test.py	/^    a = u.writeFile('\/logo.jpg',data)$/;"	v
+allowd_domains	spiders/tmall_spider.py	/^    allowd_domains = ['tmall.com']$/;"	v	class:TmallSpider
+base64	upyun-python-api/upyun.py	/^import base64$/;"	i
+canonicalize_url	utils/urlutil.py	/^        encoding=None):$/;"	f	access:public
+cgi	utils/urlutil.py	/^import cgi$/;"	i
+crawler	middlewares/hostpolite.py	/^from scrapy.project import crawler$/;"	i
+crawler	spiders/tmall_spider.py	/^from scrapy.project import crawler$/;"	i
+data	upyun-python-api/test.py	/^    data = open('aa.gif','rb')$/;"	v
+default_price	items.py	/^    default_price= Field()$/;"	v	class:GoodsItem
+defer	middlewares/hostpolite.py	/^from twisted.internet import reactor, defer$/;"	i
+delete	upyun-python-api/upyun.py	/^    def delete(self, path, headers={}, metadata={}):$/;"	m	class:UpYun	access:public
+deleteFile	upyun-python-api/upyun.py	/^    def deleteFile(self, path, headers={}, metadata={}):$/;"	m	class:UpYun	access:public
+dispatcher	seedappend.py	/^from scrapy.xlib.pydispatch import dispatcher$/;"	i
+domain	utils/urlutil.py	/^        domain = get_domain(url)$/;"	v
+getBucketUsage	upyun-python-api/upyun.py	/^    def getBucketUsage(self, path='', headers={}, metadata={}):$/;"	m	class:UpYun	access:public
+getFileInfo	upyun-python-api/upyun.py	/^    def getFileInfo(self, path, headers={}, metadata={}):$/;"	m	class:UpYun	access:public
+getFolderUsage	upyun-python-api/upyun.py	/^    def getFolderUsage(self, path='', headers={}, metadata={}):$/;"	m	class:UpYun	access:public
+getList	upyun-python-api/upyun.py	/^    def getList(self, path='', headers={}, metadata={}):$/;"	m	class:UpYun	access:public
+getWritedFileInfo	upyun-python-api/upyun.py	/^    def getWritedFileInfo(self, key):$/;"	m	class:UpYun	access:public
+get_domain	utils/urlutil.py	/^def get_domain(url):$/;"	f	access:public
+get_uid	utils/urlutil.py	/^def get_uid(url):$/;"	f	access:public
+hashlib	utils/urlutil.py	/^import hashlib$/;"	i
+httplib	upyun-python-api/upyun.py	/^import httplib$/;"	i
+imd5	upyun-python-api/upyun.py	/^import md5 as imd5$/;"	i
+img	items.py	/^    img = Field()$/;"	v	class:GoodsItem
+ip_pattern	utils/urlutil.py	/^ip_pattern = re.compile('\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}')$/;"	v
+log	middlewares/hostpolite.py	/^from scrapy import log$/;"	i
+log	seedappend.py	/^from scrapy import log$/;"	i
+log	spiders/tmall_spider.py	/^from scrapy import log$/;"	i
+md5	upyun-python-api/test.py	/^from upyun import UpYun,md5,md5file$/;"	i
+md5	upyun-python-api/upyun.py	/^def md5(src):$/;"	f	access:public
+md5file	upyun-python-api/test.py	/^from upyun import UpYun,md5,md5file$/;"	i
+md5file	upyun-python-api/upyun.py	/^def md5file(fobj):$/;"	f	access:public
+merge_meta	upyun-python-api/upyun.py	/^def merge_meta(headers, metadata):$/;"	f	access:public
+mkDir	upyun-python-api/upyun.py	/^    def mkDir(self, path, auto=False, headers={}, metadata={}):$/;"	m	class:UpYun	access:public
+name	spiders/tmall_spider.py	/^    name = 'tmall.com'$/;"	v	class:TmallSpider
+os	utils/urlutil.py	/^import os$/;"	i
+parse	spiders/tmall_spider.py	/^    def parse(self, response):$/;"	m	class:TmallSpider	access:public
+price	items.py	/^    price = Field()$/;"	v	class:GoodsItem
+process_item	pipelines.py	/^    def process_item(self, item, spider):$/;"	m	class:KeleFmPipeline	access:public
+process_request	middlewares/hostpolite.py	/^    def process_request(self, request, spider):$/;"	m	class:HostPoliteCtrlMiddleware	access:public
+re	upyun-python-api/upyun.py	/^import re$/;"	i
+re	utils/urlutil.py	/^import re$/;"	i
+reactor	middlewares/hostpolite.py	/^from twisted.internet import reactor, defer$/;"	i
+readDir	upyun-python-api/upyun.py	/^    def readDir(self, path='', headers={}, metadata={}):$/;"	m	class:UpYun	access:public
+readFile	upyun-python-api/upyun.py	/^    def readFile(self, path, headers={}, metadata={}):$/;"	m	class:UpYun	access:public
+rmDir	upyun-python-api/upyun.py	/^    def rmDir(self, path, headers={}, metadata={}):$/;"	m	class:UpYun	access:public
+safe_url_string	utils/urlutil.py	/^from scrapy.utils.url import safe_url_string$/;"	i
+setApiDomain	upyun-python-api/upyun.py	/^    def setApiDomain(self,thehost):$/;"	m	class:UpYun	access:public
+setAuthType	upyun-python-api/upyun.py	/^    def setAuthType(self,upAuth):$/;"	m	class:UpYun	access:public
+setContentMD5	upyun-python-api/upyun.py	/^    def setContentMD5(self, vaule):$/;"	m	class:UpYun	access:public
+setFileSecret	upyun-python-api/upyun.py	/^    def setFileSecret(self, vaule):$/;"	m	class:UpYun	access:public
+settings	middlewares/hostpolite.py	/^from scrapy.conf import settings$/;"	i
+signals	seedappend.py	/^from scrapy import signals$/;"	i
+spider_idle	seedappend.py	/^    def spider_idle(self):$/;"	m	class:SeedAppend	access:public
+start_urls	spiders/tmall_spider.py	/^    start_urls = [$/;"	v	class:TmallSpider
+string	middlewares/hostpolite.py	/^import string$/;"	i
+sys	upyun-python-api/test.py	/^import sys$/;"	i
+tag	items.py	/^    tag = Field()$/;"	v	class:GoodsItem
+time	middlewares/hostpolite.py	/^import time$/;"	i
+time	upyun-python-api/upyun.py	/^import time$/;"	i
+title	items.py	/^    title = Field()$/;"	v	class:GoodsItem
+types	utils/urlutil.py	/^import types$/;"	i
+u	upyun-python-api/test.py	/^    u = UpYun('空间名称','操作员用户名','操作员密码')$/;"	v
+unicode_to_str	utils/urlutil.py	/^from scrapy.utils.python import unicode_to_str$/;"	i
+url	items.py	/^    url = Field()$/;"	v	class:GoodsItem
+urllib	utils/urlutil.py	/^import urllib$/;"	i
+urlparse	utils/urlutil.py	/^import urlparse$/;"	i
+urlparse_cached	middlewares/hostpolite.py	/^from scrapy.utils.httpobj import urlparse_cached$/;"	i
+urls	utils/urlutil.py	/^    urls = ['http:\/\/finance.sina.com.cn\/g\/20110330\/06229614174.shtml',$/;"	v
+version	upyun-python-api/upyun.py	/^    def version(self):$/;"	m	class:UpYun	access:public
+writeFile	upyun-python-api/upyun.py	/^    def writeFile(self, path, data, auto = False, headers={}, metadata={}):$/;"	m	class:UpYun	access:public

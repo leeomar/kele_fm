@@ -1,0 +1,43 @@
+#/bin/python
+
+from scrapy.spider import BaseSpider
+from scrapy.selector import HtmlXPathSelector
+from scrapy.project import crawler
+from scrapy.http import Request
+from scrapy import log
+
+class TmallSpider(BaseSpider):
+    name = 'tmall.com'
+    allowd_domains = ['tmall.com']
+    start_urls = [
+            'http://brand.tmall.com/tagValueIndex.htm?industryId=100&ftg=46&prt=1331861359023&prc=1'
+            ]
+
+    def parse(self, response):
+        self.log('parse %s, meta: %s' % (response.url, response.request.meta),\
+                level=log.DEBUG)
+
+        int_dep = response.request.meta.get("INT_DEP", None)
+        if int_dep is None:
+            hxs = HtmlXPathSelector(response)
+            #brandlist_pattern = "//div[@class='brandList']/"
+            brandlist_pattern = "//div[@class='brandList']/dl/dd"
+            brandlist = hxs.select(brandlist_pattern)
+            for item in brandlist:
+                urls = item.select('a/@href').extract()
+                self._process_entrypage(urls, response)
+            
+    def _process_entrypage(self, urls, response):
+        for url in urls:
+            meta = {'INT_DEP' : 1, 'from_url' : response.url}
+            request = Request(url, meta = meta)
+            crawler.engine.crawl(request, self)
+            self.log('generate new request:%s' % url, level=log.DEBUG)
+            print 'new request %s' % url
+
+    def _process_listpage(self, urls):
+        #TODO: pagination
+        pass
+
+    def _process_detailpage(self, response):
+        pass
