@@ -24,7 +24,7 @@ if __name__ == '__main__':
     #开启调试
     u.debug = True
 
-    data = open('a.jpg','rb')
+    data = open('b.jpg','rb')
     #设置待上传文件的 Content-MD5 值
     #如又拍云服务端收到的文件MD5值与用户设置的不一致，将回报 406 Not Acceptable 错误
     u.setContentMD5(md5file(data))
@@ -34,7 +34,7 @@ if __name__ == '__main__':
     u.setFileSecret('bbbb')
     
     #开始上传文件
-    a = u.writeFile('/noext',data)
+    a = u.writeFile('/b.jpg',data)
     print a
     #a = u.writeFile('/a/b/c/d/e/f/g/logo.jpg',data, True) 可自动创建父级目录（最多10级）
 
@@ -51,6 +51,7 @@ if __name__ == '__main__':
     #print a
     #a = u.deleteFile('/testd.jpg')
     #print a
+    print "list upyun directory:"
     a = u.readDir('/')
     if a:
         for i in a:
