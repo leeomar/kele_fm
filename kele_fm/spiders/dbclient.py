@@ -6,6 +6,7 @@ class DBClient(object):
     def open(self):
         self.conn = MySQLdb.connect(user='ee', 
             passwd="f5K9ypTS", db="db_for_ee", charset="utf8")
+        self.conn.cursor().execute('SET NAMES UTF8')
 
     def close(self):
         self.conn.close()

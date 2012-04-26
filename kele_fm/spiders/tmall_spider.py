@@ -124,9 +124,9 @@ class TmallSpider(BaseSpider):
                 tag = ''
 
             goods_item = GoodsItem()
-            goods_item['url'] = product_url[0].encode('utf-8')
+            goods_item['url'] = product_url[0].encode('utf-8').strip()
             
-            title = product_title[0].encode('utf-8')
+            title = product_title[0].encode('utf-8').strip()
             goods_item['title'] = title 
             goods_item['cat'] = self.cgr.get_category(title)
             extract_tag = self.cgr.get_tag(title)
@@ -145,14 +145,16 @@ class TmallSpider(BaseSpider):
                 goods_item['img'] = ""
 
             
-            goods_item['price'] = int(float(tmall_price[0])*100)
+            bottom_price = tmall_price[0].split('-')[0]
+            goods_item['price'] = int(float(bottom_price)*100)
             if default_price and len(default_price) > 0:
                 goods_item['default_price'] = int(float(default_price[0])*100)
             else:
                 goods_item['default_price'] = 0
 
             goods_item['tag'] = tag
-            self.log('save new item: %s' % goods_item['url'])
+            self.log('save new item: %s, tmall price:%s, bottom_price:%s' % \
+                    (goods_item['url'], tmall_price[0], bottom_price))
             #self.log("generate new item: %s, %s, %s, %s, %s, %s" \
             #        % (goods_item['title'], goods_item['price'],\
             #        goods_item.get('default_price', None), goods_item['url'],\
